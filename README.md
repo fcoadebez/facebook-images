@@ -19,3 +19,8 @@ _Facebook doesn't like to be scraped, and this project is a POF. Make sure you r
 ## Usage
 
 `python main.py`
+
+## TODO
+
+- Add command line arguments for URL and dest folder
+- Handle exceptions
