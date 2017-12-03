@@ -24,3 +24,4 @@ _Facebook doesn't like to be scraped, and this project is a POF. Make sure you r
 
 - Add command line arguments for URL and dest folder
 - Handle exceptions
+- Store references to files in a Mongo DB
