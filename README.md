@@ -18,7 +18,7 @@ _Facebook doesn't like to be scraped, and this project is a POF. Make sure you r
 
 ## Usage
 
-`python main.py`
+`python main.py -u <facebook page url> -f <destination folder>`
 
 ## TODO
 
