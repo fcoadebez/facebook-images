@@ -5,8 +5,9 @@ import os
 
 class FacebookScraper:
 
-    def __init__(self, url):
+    def __init__(self, url, folder):
         self.url = url + '/photos/'
+        self.folder = folder + '/'
 
     def scrape(self):
         browser = webdriver.PhantomJS()
@@ -22,9 +23,9 @@ class FacebookScraper:
             if img.parent.name == 'a':
                 imageSource = img['src']
                 print(imageSource)
-                if not os.path.exists('Pitchfork'):
-                    os.makedirs('Pitchfork')
-                urllib.request.urlretrieve(imageSource, 'Pitchfork/' + str(i) + '.jpg')
+                if not os.path.exists(self.folder):
+                    os.makedirs(self.folder)
+                urllib.request.urlretrieve(imageSource, self.folder + str(i) + '.jpg')
 
 
         browser.close()

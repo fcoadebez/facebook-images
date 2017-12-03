@@ -1,6 +1,14 @@
 from FacebookScraper import FacebookScraper
+import argparse
 
-fbUrl = 'https://www.facebook.com/pg/Pitchfork'
+parser = argparse.ArgumentParser('Facebook Images')
+parser.add_argument('-u', '--url')
+parser.add_argument('-f', '--folder')
 
-myScraper = FacebookScraper(fbUrl)
+args = parser.parse_args()
+
+fbUrl = str(args.url)
+destFolder = str(args.folder)
+
+myScraper = FacebookScraper(fbUrl, destFolder)
 myScraper.scrape()
