@@ -2,6 +2,10 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import urllib.request
 import os
+from pymongo import MongoClient
+
+mongoClient = MongoClient()
+db = mongoClient.fbscrape
 
 class FacebookScraper:
 
@@ -26,6 +30,12 @@ class FacebookScraper:
                 if not os.path.exists(self.folder):
                     os.makedirs(self.folder)
                 urllib.request.urlretrieve(imageSource, self.folder + str(i) + '.jpg')
+                mongoDoc = {
+                    "image_id": str(i),
+                    "path": self.folder + str(i) + '.jpg'
+                }
+
+                db.fb_images.insert_one(mongoDoc)
 
 
         browser.close()
