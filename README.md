@@ -28,7 +28,7 @@ _Facebook doesn't like to be scraped, and this project is a POC. Make sure you r
 
 `flask run`
 
-- endpoint : /scrape/<PageName>/<DestFolder>`
+- endpoint : `/scrape/<PageName>/<DestFolder>`
 
 ## TODO
 
