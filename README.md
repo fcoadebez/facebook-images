@@ -18,10 +18,18 @@ _Facebook doesn't like to be scraped, and this project is a POF. Make sure you r
 
 ## Usage
 
+### Command line
+
 `python main.py -u <facebook page url> -f <destination folder>`
+
+### Server
+
+`export FLASK_APP=app.py`
+`flask run`
+
+- endpoint : /scrape/<PageName>/<DestFolder>
 
 ## TODO
 
-- Add command line arguments for URL and dest folder
-- Handle exceptions
-- Store references to files in a Mongo DB
+- Work on API
+- Work on data model
