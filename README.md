@@ -4,7 +4,7 @@ A school project to parse a Facebook page to grab pictures and analyze them with
 
 __Disclaimer__
 
-_Facebook doesn't like to be scraped, and this project is a POF. Make sure you read the legal terms of Facebook before use_
+_Facebook doesn't like to be scraped, and this project is a POC. Make sure you read the legal terms of Facebook before use_
 
 ## requirements
 
@@ -25,9 +25,10 @@ _Facebook doesn't like to be scraped, and this project is a POF. Make sure you r
 ### Server
 
 `export FLASK_APP=app.py`
+
 `flask run`
 
-- endpoint : /scrape/<PageName>/<DestFolder>
+- endpoint : /scrape/<PageName>/<DestFolder>`
 
 ## TODO
 
